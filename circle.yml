@@ -1,0 +1,18 @@
+machine:
+
+    environment:
+        JAVA_OPTS: -Xmx1G
+
+    java:
+        version: oraclejdk8
+
+dependencies:
+    pre:
+        - echo "sdk.dir=$ANDROID_HOME" > local.properties
+        - echo "java8.home.dir=$JAVA_HOME" >> local.properties
+        - echo y | android update sdk --no-ui --all --filter tools
+        - echo y | android update sdk --no-ui --all --filter build-tools-23.0.2
+        # - echo y | android update sdk --no-ui --all --filter android-23
+        # - echo y | android update sdk --no-ui --all --filter platform-tools
+        # - echo y | android update sdk --no-ui --all --filter extra-android-support
+        # - echo y | android update sdk --no-ui --all --filter extra-android-m2repository

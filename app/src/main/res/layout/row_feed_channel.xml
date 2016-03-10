@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+    <variable name="viewModel"
+        type="com.nshmura.feed.presentation.viewmodel.viewholder.RowFeedChannelViewModel"/>
+    <variable name="eventHandler"
+        type="com.nshmura.feed.presentation.view.page.home.ChannelViewHolder"/>
+  </data>
+
+  <LinearLayout
+      android:id="@+id/row_feed_channel"
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/list_row_height"
+      android:paddingLeft="@dimen/space_small"
+      android:paddingRight="@dimen/space_small"
+      android:background="?attr/selectableItemBackground"
+      android:onClick="@{eventHandler.onClick}">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/space_small"
+        android:layout_marginRight="@dimen/space_small"
+        android:layout_gravity="center_vertical"
+        android:text="@{viewModel.rssChannel.title}"
+        tools:text="Sample RSS"/>
+
+    <TextView
+        android:id="@+id/unread_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:text="@{String.valueOf(viewModel.rssChannel.unreadCount)}"
+        tools:text="99"
+        tools:ignore="RtlHardcoded"/>
+
+  </LinearLayout>
+
+</layout>

@@ -1,0 +1,11 @@
+package com.nshmura.feed.domain.entity;
+
+public enum Sort {
+  MODIFIED_ON_DESC,
+  MODIFIED_ON_ASC,
+  UNREAD_COUNT_DESC,
+  UNREAD_COUNT_ASC,
+  TITLE_ASC,
+  SUBSCRIBERS_COUNT_DESC,
+  SUBSCRIBERS_COUNT_ASC,
+}

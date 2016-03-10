@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!-- Dark -->
+  <style name="DarkTheme" parent="Theme.AppCompat.NoActionBar">
+    <item name="colorPrimary">@color/grey_800</item>
+    <item name="colorPrimaryDark">@color/grey_900</item>
+    <item name="colorAccent">@color/theme_red</item>
+    <item name="android:colorBackground">@color/grey_800</item>
+    <item name="android:textColor">@color/grey_50</item>
+    <item name="android:textColorSecondary">@color/grey_100</item>
+
+    <!-- project attr -->
+    <item name="listIconBg">@drawable/bg_list_icon_dark</item>
+    <item name="cardListBackgroundColor">@color/grey_600</item>
+    <item name="overlayBackground">@color/white_alpha50</item>
+    <item name="toolbarTextColor">?attr/android:textColorSecondary</item>
+    <item name="dividerColor">@color/grey_700</item>
+  </style>
+
+  <!-- Light -->
+  <style name="LightTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/blue_800</item>
+    <item name="colorPrimaryDark">@color/blue_900</item>
+    <item name="colorAccent">@color/theme_red</item>
+    <item name="android:colorBackground">@color/grey_100</item>
+    <item name="android:textColor">@color/grey_700</item>
+    <item name="android:textColorSecondary">@color/grey_600</item>
+
+    <item name="colorControlNormal">@color/grey_50</item>
+
+    <item name="actionBarTheme">@style/LightTheme.ActionBar</item>
+    <item name="actionBarPopupTheme">@style/LightTheme.ActinBarPopup</item>
+
+    <!-- project attr -->
+    <item name="listIconBg">@drawable/bg_list_icon_light</item>
+    <item name="cardListBackgroundColor">@color/grey_100</item>
+    <item name="overlayBackground">@color/black_alpha50</item>
+    <item name="toolbarTextColor">@color/grey_100</item>
+    <item name="dividerColor">@color/grey_400</item>
+  </style>
+
+  <style name="LightTheme.ActionBar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+    <item name="android:textColor">@color/grey_50</item>
+    <item name="android:textColorSecondary">?attr/toolbarTextColor</item>
+  </style>
+
+  <style name="LightTheme.ActinBarPopup" parent="ThemeOverlay.AppCompat.Light">
+    <item name="android:textColor">@color/grey_700</item>
+    <item name="android:textColorSecondary">@color/grey_600</item>
+  </style>
+
+  <style name="DarkTheme.Dialog" parent="Theme.AppCompat.Dialog.Alert">
+  </style>
+
+  <style name="LightTheme.Dialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+  </style>
+
+</resources>

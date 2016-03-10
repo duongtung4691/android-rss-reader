@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+    <variable name="viewModel" type="com.nshmura.feed.presentation.viewmodel.SettingsViewModel"/>
+    <variable name="eventHandler" type="com.nshmura.feed.presentation.view.page.settings.SettingsActivity"/>
+  </data>
+
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/ToolbarStyle"
+        android:id="@+id/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+        <!-- Group -->
+        <FrameLayout
+            style="@style/SettingsFrame"
+            android:onClick="@{eventHandler.onChangeGroup}">
+
+          <TextView
+              style="@style/SettingsLabel"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:text="@string/settings_group_by"/>
+
+          <TextView
+              style="@style/SettingsText"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:layout_gravity="right"
+              android:text="@{viewModel.groupByNameResource}"
+              tools:text="Folder"
+              tools:ignore="RtlHardcoded"/>
+
+        </FrameLayout>
+
+        <View style="@style/SettingsDivider"/>
+
+        <!-- Sort -->
+        <FrameLayout
+            style="@style/SettingsFrame"
+            android:onClick="@{eventHandler.onChangeSort}">
+
+          <TextView
+              style="@style/SettingsLabel"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:text="@string/settings_sort"/>
+
+          <TextView
+              style="@style/SettingsText"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:layout_gravity="right"
+              android:text="@{viewModel.sortNameResource}"
+              tools:text="Newest"
+              tools:ignore="RtlHardcoded"/>
+
+        </FrameLayout>
+
+        <View style="@style/SettingsDivider"/>
+
+        <!-- Automatically Mark As Read -->
+        <FrameLayout
+            style="@style/SettingsFrame"
+            android:onClick="@{eventHandler.onChangeAutoRead}">
+
+          <TextView
+              style="@style/SettingsLabel"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:text="@string/settings_auto_read"/>
+
+          <android.support.v7.widget.SwitchCompat
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:checked="@{viewModel.autoRead}"
+              android:clickable="false"/>
+
+        </FrameLayout>
+
+        <View style="@style/SettingsDivider"/>
+
+        <!-- Switch Theme -->
+        <FrameLayout
+            style="@style/SettingsFrame"
+            android:onClick="@{eventHandler.onSwitchTheme}">
+
+          <TextView
+              style="@style/SettingsLabel"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:text="@string/settings_switch_theme"/>
+
+          <TextView
+              style="@style/SettingsText"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:layout_gravity="right"
+              tools:text="light theme"/>
+
+        </FrameLayout>
+
+        <View style="@style/SettingsDivider"/>
+
+        <!-- Logout -->
+        <FrameLayout
+            style="@style/SettingsFrame"
+            android:onClick="@{eventHandler.onLogout}">
+
+          <TextView
+              style="@style/SettingsLabel"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:text="@string/settings_logout"/>
+
+        </FrameLayout>
+
+      </LinearLayout>
+
+    </ScrollView>
+
+  </LinearLayout>
+
+</layout>

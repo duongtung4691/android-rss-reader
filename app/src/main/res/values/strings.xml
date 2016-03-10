@@ -1,0 +1,48 @@
+<resources>
+  <string name="app_name">MyLDR beta</string>
+
+  <!-- Title -->
+  <string name="title_home">channels</string>
+  <string name="title_settings">Settings</string>
+
+  <!-- ActionBar -->
+  <string name="action_settings">Settings</string>
+
+  <!-- Drawer -->
+  <string name="drawer_settings">Settings</string>
+  <string name="drawer_switch_theme">Switch Theme</string>
+  <string name="drawer_logout">Logout</string>
+
+  <!-- Dialog -->
+  <string name="dialog_ok">OK</string>
+  <string name="dialog_cancel">Cancel</string>
+
+  <!-- Login -->
+  <string name="login_id_hint">Login Id of livedoor</string>
+  <string name="login_passowrd">Password</string>
+  <string name="login_title">livedoor Login</string>
+  <string name="login_submit">Login</string>
+
+  <!-- Settings -->
+  <string name="settings_group_by">Group</string>
+  <string name="settings_auto_read">Automatically Mark As Read</string>
+  <string name="settings_switch_theme">Switch Theme</string>
+  <string name="settings_logout">Logout</string>
+  <string name="settings_sort">Sort</string>
+
+  <!-- Group By -->
+  <string name="group_flat">Flat</string>
+  <string name="group_folder">Folder</string>
+  <string name="group_rate">Rate</string>
+
+  <!-- Sort -->
+  <string name="sort_modified_on_desc">Newest</string>
+  <string name="sort_modified_on_asc">Oldest</string>
+  <string name="sort_unread_count_desc">More Unread Entries</string>
+  <string name="sort_unread_count_asc">Less Unread Entries</string>
+  <string name="sort_title_asc">Title</string>
+  <string name="sort_subscribers_count_desc">More Subscribers</string>
+  <string name="sort_subscribers_count_asc">Less Subscribers</string>
+  <string name="share">Share</string>
+
+</resources>

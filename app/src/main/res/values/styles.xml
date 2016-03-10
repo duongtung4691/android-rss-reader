@@ -1,0 +1,40 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <style name="ToolbarStyle">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">?attr/actionBarSize</item>
+    <item name="android:background">?attr/colorPrimary</item>
+    <item name="android:elevation" tools:ignore="NewApi">@dimen/toolbar_elevation</item>
+    <item name="android:theme">?attr/actionBarTheme</item>
+    <item name="popupTheme">?attr/actionBarPopupTheme</item>
+  </style>
+
+  <style name="SettingsFrame">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">@dimen/space_large</item>
+    <item name="android:paddingLeft">@dimen/space_small</item>
+    <item name="android:paddingRight">@dimen/space_small</item>
+    <item name="android:background">?attr/selectableItemBackground</item>
+  </style>
+
+  <style name="SettingsLabel">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:textSize">@dimen/font_subheading</item>
+    <item name="android:gravity">center_vertical</item>
+  </style>
+
+  <style name="SettingsText">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:textSize">@dimen/font_body</item>
+  </style>
+
+  <style name="SettingsDivider">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">1px</item>
+    <item name="android:background">?attr/dividerColor</item>
+  </style>
+
+</resources>

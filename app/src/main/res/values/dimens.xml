@@ -1,0 +1,26 @@
+<resources>
+
+  <!-- font size -->
+  <dimen name="font_display4">112sp</dimen>
+  <dimen name="font_display3">56sp</dimen>
+  <dimen name="font_display1">45sp</dimen>
+  <dimen name="font_headline">34sp</dimen>
+  <dimen name="font_title">24sp</dimen>
+  <dimen name="font_subheading">16sp</dimen>
+  <dimen name="font_body">14sp</dimen>
+  <dimen name="font_caption">12sp</dimen>
+
+  <!-- space -->
+  <dimen name="space_xsmall">8dp</dimen>
+  <dimen name="space_small">16dp</dimen>
+  <dimen name="space_large">56dp</dimen>
+
+  <!-- width and height -->
+  <dimen name="list_header_height">48dp</dimen>
+  <dimen name="list_row_height">72dp</dimen>
+  <dimen name="list_image_bg_size">40dp</dimen>
+  <dimen name="list_image_size">20dp</dimen>
+
+  <!-- elevation -->
+  <dimen name="toolbar_elevation">3dp</dimen>
+</resources>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <data>
+    <variable name="viewModel"
+        type="com.nshmura.feed.presentation.viewmodel.EntryDetailViewModel"/>
+    <variable name="eventHandler"
+        type="com.nshmura.feed.presentation.view.page.entrydetail.EntryDetailActivity"/>
+  </data>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="?attr/cardListBackgroundColor">
+
+    <FrameLayout
+        android:id="@+id/webview_rect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:background="@color/white"/>
+
+    <com.nshmura.feed.presentation.view.widget.EntryWebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:orientation="vertical"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        android:layout_below="@+id/toolbar">
+
+      <TextView
+          android:id="@+id/title"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/font_subheading"
+          android:text="@{viewModel.rssEntry.title}"
+          tools:text="Kindle FireタブレットをFlash Playerに対応させる方法。"/>
+
+      <TextView
+          android:id="@+id/publisher"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="6dp"
+          android:textSize="@dimen/font_caption"
+          app:dateText="@{viewModel.rssEntry.createdOn}"
+          tools:text="Sample Author"/>
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.Toolbar
+        style="@style/ToolbarStyle"
+        android:id="@+id/toolbar"
+        android:elevation="0dp">
+
+      <TextView
+          android:id="@+id/toolbar_title"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:maxLines="1"
+          android:ellipsize="end"
+          android:text="@{viewModel.rssChannel.title}"
+          tools:text="Sample Title"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_browser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_small"
+        android:src="@drawable/ic_public_white_24dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="@{eventHandler.onClickBrowser}"
+        tools:ignore="RtlHardcoded"/>
+
+  </RelativeLayout>
+</layout>

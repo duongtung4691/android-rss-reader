@@ -66,6 +66,7 @@ dependencies {
 
   //ui
   compile 'com.facebook.fresco:fresco:0.8.1'
+  compile 'jp.wasabeef:recyclerview-animators:2.2.1'
 
   //web
   compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'

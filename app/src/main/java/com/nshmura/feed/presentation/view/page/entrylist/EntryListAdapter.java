@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.util.Pair;
@@ -69,7 +70,13 @@ public class EntryListAdapter extends RecyclerView.Adapter<EntryListAdapter.View
     public void bind(RssChannel rssChannel, RssEntry rssEntry) {
       viewModel.setRssChannel(rssChannel);
       viewModel.rssEntry.set(rssEntry);
-      binding.webview.loadListData(rssEntry.body);
+
+      binding.webview.loadData("", "text/html", "utf-8");
+      new Handler().postDelayed(() -> {
+        if (rssEntry.equals(viewModel.rssEntry.get())) {
+          binding.webview.loadListData(rssEntry.body);
+        }
+      }, 300);
     }
 
     @SuppressWarnings("unused") public void onClick(View v) {

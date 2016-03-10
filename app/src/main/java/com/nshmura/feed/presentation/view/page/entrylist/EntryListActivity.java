@@ -61,6 +61,7 @@ public class EntryListActivity extends BaseActivity {
 
     adapter = new EntryListAdapter(getLayoutInflater(), rssChannel);
     binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    binding.recyclerView.setItemAnimator(new EntryListItemAnimator());
     binding.recyclerView.setAdapter(adapter);
 
     //Transtion

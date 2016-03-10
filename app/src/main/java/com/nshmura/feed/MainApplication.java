@@ -2,7 +2,6 @@ package com.nshmura.feed;
 
 import android.app.Application;
 import android.content.Context;
-import com.facebook.drawee.backends.pipeline.Fresco;
 import com.nshmura.feed.di.ApplicationComponent;
 import com.nshmura.feed.di.DaggerApplicationComponent;
 import com.nshmura.feed.di.module.ApplicationModule;
@@ -30,7 +29,6 @@ public class MainApplication extends Application {
     }
 
     StethoInitializer.init(this);
-    Fresco.initialize(this);
   }
 
   public static MainApplication get(Context context) {

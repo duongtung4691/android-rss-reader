@@ -1,13 +1,13 @@
 # android-rss-reader
-An android RSS reader app for Live Dwango Reader
+An android RSS reader app for [Live Dwango Reader](http://reader.livedoor.com)
 
 ![movie](art/movie.gif) 
 
 # Architecture & Development Environment
-- [Clean](https://github.com/android10/Android-CleanArchitecture)
+- [Clean Architecture](https://github.com/android10/Android-CleanArchitecture)
 - MVVM using the [Data Binding Library](http://developer.android.com/intl/ja/tools/data-binding/guide.html)
-- Java8 ([retrolambda](https://github.com/orfjackal/retrolambda))
 - Dependency Injection with [Dagger2](http://google.github.io/dagger/)
+- Java8 ([retrolambda](https://github.com/orfjackal/retrolambda))
 
 # Libraries in this app
 

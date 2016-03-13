@@ -3,6 +3,7 @@ package com.nshmura.feed.presentation.view.page.entrylist;
 import android.animation.AnimatorSet;
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -105,7 +106,11 @@ public class EntryListActivity extends BaseActivity {
     return super.onOptionsItemSelected(item);
   }
 
-  private void enterAnimation() {
+  @TargetApi(Build.VERSION_CODES.LOLLIPOP) private void enterAnimation() {
+    Transition transition = getDefaultEnterAnimation();
+    getWindow().setExitTransition(transition);
+    getWindow().setEnterTransition(transition);
+
     binding.toolbar.setAlpha(0);
     binding.toolbar.animate().alpha(1f).setDuration(TRANSITION_TIME).start();
   }

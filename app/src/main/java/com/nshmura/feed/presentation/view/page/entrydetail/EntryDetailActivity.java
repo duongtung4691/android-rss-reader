@@ -15,6 +15,7 @@ import android.support.customtabs.CustomTabsIntent;
 import android.support.v4.app.ShareCompat;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewGroupCompat;
+import android.transition.Transition;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import com.nshmura.feed.R;
@@ -73,6 +74,7 @@ public class EntryDetailActivity extends BaseActivity {
 
     //Transtion
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+      ViewCompat.setTransitionName(binding.toolbar, TransitionNames.TOOLBAR);
       ViewCompat.setTransitionName(binding.header, TransitionNames.HEADER);
       ViewCompat.setTransitionName(binding.webviewRect, TransitionNames.CONTENT);
       ViewCompat.setTransitionName(binding.title, TransitionNames.TITLE);
@@ -83,6 +85,10 @@ public class EntryDetailActivity extends BaseActivity {
   }
 
   @TargetApi(Build.VERSION_CODES.LOLLIPOP) private void enterAnimation() {
+    Transition transition = getDefaultEnterAnimation();
+    getWindow().setExitTransition(transition);
+    getWindow().setEnterTransition(transition);
+
     binding.webview.setVisibility(View.INVISIBLE);
     binding.fabBrowser.setVisibility(View.INVISIBLE);
     new Handler().postDelayed(() -> {

@@ -85,8 +85,11 @@ public class EntryListAdapter extends RecyclerView.Adapter<EntryListAdapter.View
       Intent intent = EntryDetailActivity.createIntent(
           activity, viewModel.geRssChannel(), viewModel.rssEntry.get());
 
+      View toolbar = v.getRootView().findViewById(R.id.toolbar);
+
       //noinspection unchecked
       Bundle bundle = ActivityOptionsCompat.makeSceneTransitionAnimation(activity,
+          Pair.create(toolbar, TransitionNames.TOOLBAR),
           Pair.create(binding.headerRect, TransitionNames.HEADER),
           Pair.create(binding.webview, TransitionNames.CONTENT),
           Pair.create(binding.title, TransitionNames.TITLE),

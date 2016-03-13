@@ -1,15 +1,22 @@
 # android-rss-reader
-An android RSS reader app for [Live Dwango Reader](http://reader.livedoor.com)
+An android RSS reader app for [Live Dwango Reader](http://reader.livedoor.com) <br>
+*This app is still in development.*
 
-![movie](art/movie.gif) 
+<img src="art/movie.gif" width="300" align="right" hspace="20">
 
-# Architecture & Development Environment
+### Screenshots
+<img src="art/capture1.png" width="25%" hspace="10" vspace="10"/>
+<img src="art/capture2.png" width="25%" hspace="10" vspace="10"/>
+<img src="art/capture3.png" width="25%" hspace="10" vspace="10"/>
+<img src="art/capture4.png" width="25%" hspace="10" vspace="10"/>
+
+### Architecture & Development Environment
 - [Clean Architecture](https://github.com/android10/Android-CleanArchitecture)
 - MVVM using the [Data Binding Library](http://developer.android.com/intl/ja/tools/data-binding/guide.html)
 - Dependency Injection with [Dagger2](http://google.github.io/dagger/)
 - Java8 ([retrolambda](https://github.com/orfjackal/retrolambda))
 
-# Libraries in this app
+### Libraries in this app
 
 - [Retrofit2](http://square.github.io/retrofit/)
 - [OkHttp](http://square.github.io/okhttp/)
@@ -25,7 +32,7 @@ An android RSS reader app for [Live Dwango Reader](http://reader.livedoor.com)
 - [Android Support Libraries](http://developer.android.com/intl/ja/tools/support-library/index.html)
 - [gradle-retrolambda](https://github.com/evant/gradle-retrolambda)
 
-# License
+### License
 
 ```
 Copyright 2016 nshmura
